@@ -1,0 +1,84 @@
+﻿@model ZPS_DB.Models.StudentLC
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>StudentLC</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.AdmissionID)
+
+        @Html.HiddenFor(model => model.AadharCard)
+
+        @Html.HiddenFor(model => model.FirstName)
+
+        @Html.HiddenFor(model => model.FatherName)
+
+        @Html.HiddenFor(model => model.LastName)
+
+        @Html.HiddenFor(model => model.MotherName)
+
+        @Html.HiddenFor(model => model.Nationality)
+
+        @Html.HiddenFor(model => model.MotherTongue)
+
+        @Html.HiddenFor(model => model.Religion)
+
+        @Html.HiddenFor(model => model.Cast)
+
+        @Html.HiddenFor(model => model.SubCast)
+
+        @Html.HiddenFor(model => model.BirthPlace)
+
+        @Html.HiddenFor(model => model.Taluka)
+
+        @Html.HiddenFor(model => model.District)
+
+        @Html.HiddenFor(model => model.State)
+
+        @Html.HiddenFor(model => model.DOB)
+
+        @Html.HiddenFor(model => model.DOB_In_Words)
+
+        @Html.HiddenFor(model => model.PreviousSchool)
+
+        @Html.HiddenFor(model => model.Division)
+
+        @Html.HiddenFor(model => model.AdmissionDate)
+
+        @Html.HiddenFor(model => model.AdmissionDivision)
+
+        @Html.HiddenFor(model => model.Performance)
+
+        @Html.HiddenFor(model => model.Behaviour)
+
+        @Html.HiddenFor(model => model.SchoolLeaveDate)
+
+        @Html.HiddenFor(model => model.CurrentDivision)
+
+        @Html.HiddenFor(model => model.Reason)
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

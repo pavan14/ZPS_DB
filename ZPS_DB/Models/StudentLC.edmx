@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ZPSDBDATAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ZPSDBDATA.dbo.StudentLC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="StudentLC">
+          <Key>
+            <PropertyRef Name="AdmissionID" />
+            <PropertyRef Name="AadharCard" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="FatherName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="MotherName" />
+            <PropertyRef Name="Nationality" />
+            <PropertyRef Name="MotherTongue" />
+            <PropertyRef Name="Religion" />
+            <PropertyRef Name="Cast" />
+            <PropertyRef Name="SubCast" />
+            <PropertyRef Name="BirthPlace" />
+            <PropertyRef Name="Taluka" />
+            <PropertyRef Name="District" />
+            <PropertyRef Name="State" />
+            <PropertyRef Name="DOB" />
+            <PropertyRef Name="DOB In Words" />
+            <PropertyRef Name="PreviousSchool" />
+            <PropertyRef Name="Division" />
+            <PropertyRef Name="AdmissionDate" />
+            <PropertyRef Name="AdmissionDivision" />
+            <PropertyRef Name="Performance" />
+            <PropertyRef Name="Behaviour" />
+            <PropertyRef Name="SchoolLeaveDate" />
+            <PropertyRef Name="CurrentDivision" />
+            <PropertyRef Name="Reason" />
+          </Key>
+          <Property Name="AdmissionID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="AadharCard" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FatherName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MotherName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nationality" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MotherTongue" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Religion" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cast" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SubCast" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BirthPlace" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Taluka" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="District" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DOB" Type="date" Nullable="false" />
+          <Property Name="DOB In Words" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PreviousSchool" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Division" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AdmissionDate" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AdmissionDivision" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Performance" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Behaviour" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SchoolLeaveDate" Type="date" Nullable="false" />
+          <Property Name="CurrentDivision" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Reason" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ZPSDBDATAModelStoreContainer">
+          <EntitySet Name="StudentLC" EntityType="Self.StudentLC" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [StudentLC].[AdmissionID] AS [AdmissionID], 
+    [StudentLC].[AadharCard] AS [AadharCard], 
+    [StudentLC].[FirstName] AS [FirstName], 
+    [StudentLC].[FatherName] AS [FatherName], 
+    [StudentLC].[LastName] AS [LastName], 
+    [StudentLC].[MotherName] AS [MotherName], 
+    [StudentLC].[Nationality] AS [Nationality], 
+    [StudentLC].[MotherTongue] AS [MotherTongue], 
+    [StudentLC].[Religion] AS [Religion], 
+    [StudentLC].[Cast] AS [Cast], 
+    [StudentLC].[SubCast] AS [SubCast], 
+    [StudentLC].[BirthPlace] AS [BirthPlace], 
+    [StudentLC].[Taluka] AS [Taluka], 
+    [StudentLC].[District] AS [District], 
+    [StudentLC].[State] AS [State], 
+    [StudentLC].[DOB] AS [DOB], 
+    [StudentLC].[DOB In Words] AS [DOB In Words], 
+    [StudentLC].[PreviousSchool] AS [PreviousSchool], 
+    [StudentLC].[Division] AS [Division], 
+    [StudentLC].[AdmissionDate] AS [AdmissionDate], 
+    [StudentLC].[AdmissionDivision] AS [AdmissionDivision], 
+    [StudentLC].[Performance] AS [Performance], 
+    [StudentLC].[Behaviour] AS [Behaviour], 
+    [StudentLC].[SchoolLeaveDate] AS [SchoolLeaveDate], 
+    [StudentLC].[CurrentDivision] AS [CurrentDivision], 
+    [StudentLC].[Reason] AS [Reason]
+    FROM [dbo].[StudentLC] AS [StudentLC]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZPSDBDATAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="StudentLC">
+          <Key>
+            <PropertyRef Name="AdmissionID" />
+            <PropertyRef Name="AadharCard" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="FatherName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="MotherName" />
+            <PropertyRef Name="Nationality" />
+            <PropertyRef Name="MotherTongue" />
+            <PropertyRef Name="Religion" />
+            <PropertyRef Name="Cast" />
+            <PropertyRef Name="SubCast" />
+            <PropertyRef Name="BirthPlace" />
+            <PropertyRef Name="Taluka" />
+            <PropertyRef Name="District" />
+            <PropertyRef Name="State" />
+            <PropertyRef Name="DOB" />
+            <PropertyRef Name="DOB_In_Words" />
+            <PropertyRef Name="PreviousSchool" />
+            <PropertyRef Name="Division" />
+            <PropertyRef Name="AdmissionDate" />
+            <PropertyRef Name="AdmissionDivision" />
+            <PropertyRef Name="Performance" />
+            <PropertyRef Name="Behaviour" />
+            <PropertyRef Name="SchoolLeaveDate" />
+            <PropertyRef Name="CurrentDivision" />
+            <PropertyRef Name="Reason" />
+          </Key>
+          <Property Name="AdmissionID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="AadharCard" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FatherName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MotherName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nationality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MotherTongue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Religion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Cast" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SubCast" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BirthPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Taluka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DOB_In_Words" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PreviousSchool" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Division" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AdmissionDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AdmissionDivision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Performance" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Behaviour" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SchoolLeaveDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CurrentDivision" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ZPSDBDATAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="StudentLCs" EntityType="Self.StudentLC" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZPSDBDATAModelStoreContainer" CdmEntityContainer="ZPSDBDATAEntities">
+          <EntitySetMapping Name="StudentLCs">
+            <EntityTypeMapping TypeName="ZPSDBDATAModel.StudentLC">
+              <MappingFragment StoreEntitySet="StudentLC">
+                <ScalarProperty Name="AdmissionID" ColumnName="AdmissionID" />
+                <ScalarProperty Name="AadharCard" ColumnName="AadharCard" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="MotherTongue" ColumnName="MotherTongue" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Cast" ColumnName="Cast" />
+                <ScalarProperty Name="SubCast" ColumnName="SubCast" />
+                <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+                <ScalarProperty Name="Taluka" ColumnName="Taluka" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="DOB_In_Words" ColumnName="DOB In Words" />
+                <ScalarProperty Name="PreviousSchool" ColumnName="PreviousSchool" />
+                <ScalarProperty Name="Division" ColumnName="Division" />
+                <ScalarProperty Name="AdmissionDate" ColumnName="AdmissionDate" />
+                <ScalarProperty Name="AdmissionDivision" ColumnName="AdmissionDivision" />
+                <ScalarProperty Name="Performance" ColumnName="Performance" />
+                <ScalarProperty Name="Behaviour" ColumnName="Behaviour" />
+                <ScalarProperty Name="SchoolLeaveDate" ColumnName="SchoolLeaveDate" />
+                <ScalarProperty Name="CurrentDivision" ColumnName="CurrentDivision" />
+                <ScalarProperty Name="Reason" ColumnName="Reason" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
